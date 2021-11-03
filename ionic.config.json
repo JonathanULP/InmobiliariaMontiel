@@ -1,0 +1,7 @@
+{
+  "name": "InmoMontiel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
