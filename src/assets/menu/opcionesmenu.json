@@ -1,0 +1,14 @@
+[
+  {
+    "nombre":"Ubicación",
+    "redirectTo":"/ubicacion"
+  },
+  {
+    "nombre":"Perfil",
+    "redirectTo":"/perfil"
+  },
+  {
+    "nombre":"Inmuebles",
+    "redirectTo":"/inmuebles"
+  }
+]

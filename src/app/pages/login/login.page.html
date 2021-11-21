@@ -1,0 +1,44 @@
+<app-header nombre="Ingresar"></app-header>
+
+<ion-content color="dark" class="vertical-align-content">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+          <ion-avatar class="avatar">
+            <img style="text-align:center" src="../../assets/images/user.jpg">
+          </ion-avatar>
+
+        <form #formulario="ngForm" (ngSubmit)="entrar(formulario)" color="dark">
+          <ion-item color="light" class="item">
+            <ion-input type="email"
+                       placeholder="email"
+                       required
+                       pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                       [(ngModel)]="usuario.Usuario"
+                       name="Usuario"
+                      ></ion-input>
+          </ion-item>
+
+          <ion-item color="light" class="item">
+            <ion-input type="password"
+                       placeholder="password"
+                        required
+                       [(ngModel)]="usuario.Clave"
+                        name="Clave"
+                        >
+            </ion-input>
+          </ion-item>
+
+          <ion-list style="text-align:center" color="dark" class="item-background-color">
+            <ion-button expand="fill" type="submit" class="ingresar">Ingresar</ion-button>
+          </ion-list>
+
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

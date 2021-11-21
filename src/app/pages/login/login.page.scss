@@ -1,0 +1,24 @@
+.item {margin:2%; margin-bottom: 5%;border: 2px solid rgb(93, 107, 185);
+  border-radius: 25px; text-align: center;}
+
+.ingresar{border-radius: 35px;}
+
+.item-background-color{
+  --ion-item-background:#00000000;
+}
+
+ion-grid{
+  height: 100%;
+}
+ion-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.avatar{
+  margin: auto;
+  margin-bottom: 5%;
+  border: 1px solid gray
+}

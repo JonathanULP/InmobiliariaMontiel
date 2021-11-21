@@ -1,0 +1,29 @@
+<ion-card>
+
+  <ion-card-header>
+
+    <ion-card-title>{{ inmueble.direccion }} </ion-card-title>
+  </ion-card-header>
+
+  <ion-img
+            class="animated fadeIn fast"
+            src="../../assets/images/casa-rent.jpg">
+  </ion-img>
+
+  <ion-card-content>
+
+    <ion-item>
+      <ion-label position="stacked" color="light">Superficie</ion-label>
+      <ion-input color="light"> {{ inmueble.superficie }} </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" color="light">Latitud</ion-label>
+      <ion-input color="light"> {{ inmueble.latitud }} </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" color="light">Longitud</ion-label>
+      <ion-input color="light"> {{ inmueble.longitud }} </ion-input>
+    </ion-item>
+  </ion-card-content>
+
+</ion-card>

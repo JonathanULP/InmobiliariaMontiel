@@ -1,0 +1,20 @@
+.item {margin:2%; margin-bottom: 5%;border: 2px solid rgb(93, 107, 185);
+  border-radius: 25px; text-align: center;}
+
+.actualizar{border-radius: 35px;}
+
+.item-background-color{
+  --ion-item-background:#00000000;
+}
+
+p {color: rgb(214, 214, 214); text-align: center; font-weight: bold;}
+
+ion-grid{
+  height: 100%;
+}
+ion-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
