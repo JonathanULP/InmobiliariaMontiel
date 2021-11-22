@@ -1,6 +1,6 @@
 <ion-menu side="end" menuId="principal" contentId="main">
   <ion-header>
-    <ion-toolbar color="primary">
+    <ion-toolbar color="dark">
       <ion-title>Opciones</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -13,6 +13,9 @@
           <ion-label>{{ o.nombre }}</ion-label>
         </ion-item>
       </ion-menu-toggle>
+      <ion-item routerLink="/login" (click)="logout()">
+        <ion-label>Salir</ion-label>
+      </ion-item>
 
   </ion-list>
 

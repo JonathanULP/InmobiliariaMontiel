@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonInfiniteScroll } from '@ionic/angular';
 import { Inmueble } from 'src/app/interfaces/inmuebles';
 import { InmueblesService } from 'src/app/services/inmuebles.service';
@@ -12,12 +13,12 @@ export class InmueblesPage implements OnInit {
 
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
 
-  constructor(private inmuebleservice: InmueblesService) { }
+  constructor(private inmuebleservice: InmueblesService,private router: Router) {  }
 
   inmuebles: Inmueble[] =[];
 
   ngOnInit() {
-    this.getInmuebles();
+      this.getInmuebles();
   }
 
    async getInmuebles()

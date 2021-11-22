@@ -43,6 +43,23 @@ export class InmueblesService {
     });
   }
 
+  public async updateInmueble(inmueble:Inmueble,id: number)
+  {
+    const headers =
+    {
+      'Content-Type': 'application/json',
+      'authorization': `Bearer ${ await this.getToken()}`
+    }
+
+    return new Promise((resolve,reject)=>{
+      this.http.put<Inmueble>(`http://practicastuds.ulp.edu.ar/api/Inmuebles/${id}`,inmueble,{headers})
+      .subscribe(
+        res => resolve(res), err => reject(err)
+      );
+    })
+  }
+
+
   private async getToken(): Promise<string> {
     return await this.storageservice.get('token');
   }

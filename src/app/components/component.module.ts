@@ -6,6 +6,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { InmuebleComponent } from './inmueble/inmueble.component';
 import { InmueblesComponent } from './inmuebles/inmuebles.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -21,7 +22,8 @@ import { InmueblesComponent } from './inmuebles/inmuebles.component';
   imports: [
     CommonModule,
     IonicModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

@@ -13,22 +13,41 @@
 
           <ion-item color="dark">
             <ion-label position="floating" color="light">Dirección</ion-label>
-            <ion-input type="text" color="light" [(ngModel)]="inmueble.direccion" name="direccion">  </ion-input>
+            <ion-input type="text"
+                       color="light"
+                       [(ngModel)]="inmueble.direccion"
+                        name="direccion"
+                        inputmode="text">  </ion-input>
           </ion-item>
 
           <ion-item color="dark">
             <ion-label position="floating" color="light">Superficie</ion-label>
-            <ion-input type="number" color="light" [(ngModel)]="inmueble.superficie" name="superficie">  </ion-input>
+            <ion-input type="number"
+                       color="light"
+                       [(ngModel)]="inmueble.superficie"
+                        name="superficie"
+                        inputmode="numeric">
+            </ion-input>
           </ion-item>
 
           <ion-item color="dark">
             <ion-label position="floating" color="light">Latitud</ion-label>
-            <ion-input type="number" color="light"  [(ngModel)]="inmueble.latitud" name="latitud">  </ion-input>
+            <ion-input type="number"
+                       color="light"
+                       [(ngModel)]="inmueble.latitud"
+                        name="latitud"
+                        inputmode="numeric"
+                        maxlength=3>  </ion-input>
           </ion-item>
 
           <ion-item color="dark">
             <ion-label position="floating" color="light">Longitud</ion-label>
-            <ion-input type="number" color="light" [(ngModel)]="inmueble.longitud" name="longitud">  </ion-input>
+            <ion-input type="number"
+                       color="light"
+                       [(ngModel)]="inmueble.longitud"
+                        name="longitud"
+                        inputmode="numeric"
+                        maxlength=3>  </ion-input>
           </ion-item>
 
           <!-- <ion-item color="dark">

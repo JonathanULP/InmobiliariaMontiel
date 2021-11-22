@@ -2,7 +2,15 @@
 
   <ion-card-header>
 
-    <ion-card-title>{{ inmueble.direccion }} </ion-card-title>
+    <ion-card-title>{{ inmueble.direccion }}
+      <div class="noticia-more">
+        <ion-button fill="clear"
+                    color="light"
+                    (click)="lanzarMenu()">
+          Borrar
+        </ion-button>
+      </div>
+    </ion-card-title>
   </ion-card-header>
 
   <ion-img
@@ -11,19 +19,38 @@
   </ion-img>
 
   <ion-card-content>
+    <form #formulario="ngForm" (ngSubmit)="updateInmueble()" color="dark">
 
     <ion-item>
       <ion-label position="stacked" color="light">Superficie</ion-label>
-      <ion-input color="light"> {{ inmueble.superficie }} </ion-input>
+      <ion-input color="light"
+                 [(ngModel)]="inmueble.superficie"
+                 name="superficie"
+                 type="number"
+                 inputmode="numeric"> </ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked" color="light">Latitud</ion-label>
-      <ion-input color="light"> {{ inmueble.latitud }} </ion-input>
+      <ion-input color="light"
+                 [(ngModel)]="inmueble.latitud"
+                 name="latitud"
+                 type="number"
+                 inputmode="numeric"> </ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked" color="light">Longitud</ion-label>
-      <ion-input color="light"> {{ inmueble.longitud }} </ion-input>
+      <ion-input color="light"
+                 [(ngModel)]="inmueble.longitud"
+                 name="longitud"
+                 type="number"
+                 inputmode="numeric"> </ion-input>
     </ion-item>
+
+    <ion-list style="text-align:center" class="item-background-color">
+      <ion-button expand="fill" type="submit" color="warning">Editar</ion-button>
+    </ion-list>
+
+  </form>
   </ion-card-content>
 
 </ion-card>

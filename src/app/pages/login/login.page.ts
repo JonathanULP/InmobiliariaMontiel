@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { NavigationExtras, Router } from '@angular/router';
+import { AlertController, MenuController } from '@ionic/angular';
 import { loginView } from 'src/app/interfaces/loginView';
 import { LoginService } from 'src/app/services/login.service';
 
@@ -11,7 +11,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private loginservice: LoginService, private router:Router,private menuController: MenuController) { }
+  constructor(private loginservice: LoginService, private router:Router,private menuController: MenuController,private alertController: AlertController) { }
 
   public usuario : loginView = {
     Usuario : '',
@@ -25,20 +25,29 @@ export class LoginPage implements OnInit {
   async entrar()
   {
     const token = await this.loginservice.login(this.usuario).catch(error => {
-      console.log(error);
+      this.presentAlert("Usuario o Contraseña incorrecto","Ups!");
     });
     if(!token)
     {
       return
     }
     else{
-
-      const perfil = await this.loginservice.getPerfil().catch(error => {
-        console.log(error);
-      });
-      this.router.navigate(['/mapa']);
-      console.log(perfil);
+      this.router.navigate(['/inmuebles']);
     }
+  }
+
+
+  async presentAlert(message:string,header:string) {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header,
+      message,
+      animated: true,
+      buttons: ['OK']
+    });
+
+    await alert.present();
+
   }
 
 

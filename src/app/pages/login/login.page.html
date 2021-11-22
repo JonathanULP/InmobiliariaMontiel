@@ -13,6 +13,7 @@
         <form #formulario="ngForm" (ngSubmit)="entrar(formulario)" color="dark">
           <ion-item color="light" class="item">
             <ion-input type="email"
+                       inputmode="email"
                        placeholder="email"
                        required
                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
