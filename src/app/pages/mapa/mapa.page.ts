@@ -8,7 +8,7 @@ declare var mapboxgl : any;
   templateUrl: './mapa.page.html',
   styleUrls: ['./mapa.page.scss'],
 })
-export class MapaPage implements OnInit//,AfterViewInit
+export class MapaPage implements OnInit,AfterViewInit
  {
 
   constructor(private menuController: MenuController) { }
@@ -22,7 +22,7 @@ export class MapaPage implements OnInit//,AfterViewInit
     this.menuController.toggle();
   }
 
-  /* ngAfterViewInit() :void
+  ngAfterViewInit() :void
   {
     mapboxgl.accessToken = 'pk.eyJ1Ijoiam9uYXRoYW4xMjE4IiwiYSI6ImNrdnU3MXp5NDNwa3oybm10aDY5NnNha24ifQ.H7AY0JkIoL98JFbO-ubK5Q';
     var map = new mapboxgl.Map({
@@ -85,6 +85,6 @@ export class MapaPage implements OnInit//,AfterViewInit
       .setPopup(new mapboxgl.Popup().setHTML("<h1>Inmobiliaria La Punta</h1>"))
       .addTo(map);
 
-  } */
+  }
 
 }

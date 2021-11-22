@@ -3,19 +3,13 @@
   <ion-card-header>
 
     <ion-card-title>{{ inmueble.direccion }}
-      <div class="noticia-more">
-        <ion-button fill="clear"
-                    color="light"
-                    (click)="lanzarMenu()">
-          Borrar
-        </ion-button>
-      </div>
+
     </ion-card-title>
   </ion-card-header>
 
   <ion-img
             class="animated fadeIn fast"
-            src="../../assets/images/casa-rent.jpg">
+            src="../../assets/images/casa.jpg">
   </ion-img>
 
   <ion-card-content>
@@ -47,7 +41,9 @@
     </ion-item>
 
     <ion-list style="text-align:center" class="item-background-color">
-      <ion-button expand="fill" type="submit" color="warning">Editar</ion-button>
+      <ion-button expand="block" type="submit" color="warning">Editar</ion-button>
+
+      <ion-button expand="block" color="danger" (click)="deleteInmueble()">Eliminar</ion-button>
     </ion-list>
 
   </form>

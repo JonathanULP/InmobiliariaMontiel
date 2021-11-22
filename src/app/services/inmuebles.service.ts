@@ -56,7 +56,23 @@ export class InmueblesService {
       .subscribe(
         res => resolve(res), err => reject(err)
       );
-    })
+    });
+  }
+
+  public async deleteInmueble(id:number)
+  {
+    const headers =
+    {
+      'Content-Type': 'application/json',
+      'authorization': `Bearer ${ await this.getToken()}`
+    }
+
+    return new Promise((resolve,reject)=>{
+      this.http.delete(`http://practicastuds.ulp.edu.ar/api/Inmuebles/${id}`,{headers})
+      .subscribe(
+        res => resolve(res), err => reject(err)
+      );
+    });
   }
 
 

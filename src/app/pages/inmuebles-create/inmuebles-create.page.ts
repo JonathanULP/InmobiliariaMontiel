@@ -30,6 +30,14 @@ export class InmueblesCreatePage implements OnInit {
 
   }
 
+  limpiarCampos()
+  {
+    this.inmueble.direccion = '';
+    this.inmueble.superficie = null;
+    this.inmueble.latitud = null;
+    this.inmueble.longitud = null;
+  }
+
   async getDatosUsuarioActual()
   {
     const data: Perfil = await this.perfilservice.getPerfil();
@@ -43,7 +51,7 @@ export class InmueblesCreatePage implements OnInit {
     await this.getDatosUsuarioActual();
     const respuesta = await this.inmuebleservice.createInmueble(this.inmueble)
                     .then(() => {this.presentAlert('Inmueble creado con éxito','Éxito')
-                                 this.router.navigate(['/inmuebles']) })
+                                  this.limpiarCampos()})
                     .catch(() => this.presentAlert('Error al crear un inmueble','Ups!'))
   }
 

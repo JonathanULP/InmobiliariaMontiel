@@ -1,7 +1,7 @@
 [
   {
-    "nombre":"Ubicación",
-    "redirectTo":"/ubicacion"
+    "nombre":"Mapa",
+    "redirectTo":"/mapa"
   },
   {
     "nombre":"Perfil",

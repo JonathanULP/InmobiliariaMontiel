@@ -2,8 +2,22 @@
 
 <ion-content color="dark">
 
+  <ion-grid *ngIf="inmuebles.length == 0">
+    <ion-row>
+      <ion-col>
+          <ion-toolbar color="dark">
+            <ion-title size="large" color="medium">NO SE ENCONTRARON RESULTADOS</ion-title>
+          </ion-toolbar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <app-inmuebles-component [inmuebles]="inmuebles"></app-inmuebles-component>
 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink='/inmuebles-create'>
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
 <ion-infinite-scroll threshold="300px"
                      (ionInfinite)="loadData($event)">
