@@ -38,7 +38,7 @@ export class PerfilPage implements OnInit {
 
   updatePerfil()
   {
-    console.log('Datos'+this.perfil);
+
         this.perfilservice.updatePerfil(this.perfil,this.perfil.id)
         .then( () => this.presentAlert("Usuario actualizado correctamente","Éxito"))
         .catch(() => this.presentAlert("Error al actualizar usuario","Error"));

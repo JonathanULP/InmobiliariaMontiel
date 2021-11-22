@@ -1,0 +1,48 @@
+<app-header nombre="Inmuebles" [show]=true></app-header>
+
+<ion-content color="dark" class="vertical-align-content">
+<ion-toolbar color="dark">
+  <ion-title size="large">GENERAR NUEVO INMUEBLE</ion-title>
+</ion-toolbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+        <form #formulario="ngForm" (ngSubmit)="createInmueble(formulario)" color="dark">
+
+          <ion-item color="dark">
+            <ion-label position="floating" color="light">Dirección</ion-label>
+            <ion-input type="text" color="light" [(ngModel)]="inmueble.direccion" name="direccion">  </ion-input>
+          </ion-item>
+
+          <ion-item color="dark">
+            <ion-label position="floating" color="light">Superficie</ion-label>
+            <ion-input type="number" color="light" [(ngModel)]="inmueble.superficie" name="superficie">  </ion-input>
+          </ion-item>
+
+          <ion-item color="dark">
+            <ion-label position="floating" color="light">Latitud</ion-label>
+            <ion-input type="number" color="light"  [(ngModel)]="inmueble.latitud" name="latitud">  </ion-input>
+          </ion-item>
+
+          <ion-item color="dark">
+            <ion-label position="floating" color="light">Longitud</ion-label>
+            <ion-input type="number" color="light" [(ngModel)]="inmueble.longitud" name="longitud">  </ion-input>
+          </ion-item>
+
+          <!-- <ion-item color="dark">
+            <ion-input type="hidden" color="light" [(ngModel)]="inmueble.propietarioId">  </ion-input>
+          </ion-item> -->
+
+          <ion-list style="text-align:center" color="dark" class="item-background-color">
+            <ion-button expand="fill" type="submit" color="success">Insertar</ion-button>
+          </ion-list>
+
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

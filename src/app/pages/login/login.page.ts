@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 import { loginView } from 'src/app/interfaces/loginView';
 import { LoginService } from 'src/app/services/login.service';
 
@@ -10,13 +11,14 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private loginservice: LoginService, private router:Router) { }
+  constructor(private loginservice: LoginService, private router:Router,private menuController: MenuController) { }
 
   public usuario : loginView = {
     Usuario : '',
     Clave : ''
   };
   ngOnInit() {
+    this.menuController.enable(false,'principal');
   }
 
 
@@ -38,5 +40,7 @@ export class LoginPage implements OnInit {
       console.log(perfil);
     }
   }
+
+
 
 }

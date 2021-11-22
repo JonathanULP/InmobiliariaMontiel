@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Inmueble } from '../interfaces/inmuebles';
 import { StorageService } from './storage.service';
 
@@ -28,6 +27,21 @@ export class InmueblesService {
     });
   }
 
+
+  public async createInmueble(inmueble:Inmueble)
+  {
+    const headers =
+    {
+      'Content-Type': 'application/json',
+      'authorization': `Bearer ${ await this.getToken()}`
+    }
+    return new Promise<Inmueble>((resolve,reject)=>{
+      this.http.post('http://practicastuds.ulp.edu.ar/api/Inmuebles',inmueble,{headers})
+      .subscribe(
+        res => resolve(res), err => reject(err)
+      );
+    });
+  }
 
   private async getToken(): Promise<string> {
     return await this.storageservice.get('token');

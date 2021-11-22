@@ -29,6 +29,10 @@ const routes: Routes = [
     path: 'perfil',
    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
    },
+  {
+    path: 'inmuebles-create',
+    loadChildren: () => import('./pages/inmuebles-create/inmuebles-create.module').then( m => m.InmueblesCreatePageModule)
+  },
 ];
 
 @NgModule({

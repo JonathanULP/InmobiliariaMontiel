@@ -9,7 +9,7 @@ import { MenuController } from '@ionic/angular';
 export class HeaderComponent implements OnInit {
 
   @Input() nombre: string = '';
-  @Input() show: boolean = false;
+  @Input() show: boolean = true;
   constructor(private menuController: MenuController) { }
 
   ngOnInit() {}

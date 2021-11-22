@@ -14,7 +14,6 @@ import { MenuserviceService } from 'src/app/services/menuservice.service';
 export class MenuComponent implements OnInit {
 
   opciones:Observable<Menu[]>
-
   constructor(private serviciomenu : MenuserviceService) { }
 
   ngOnInit() {
