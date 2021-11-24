@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -9,5 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   constructor() {}
   ngOnInit(): void {
+
   }
 }

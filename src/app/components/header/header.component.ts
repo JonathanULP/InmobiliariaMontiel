@@ -12,11 +12,12 @@ export class HeaderComponent implements OnInit {
   @Input() show: boolean = true;
   constructor(private menuController: MenuController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    if(this.show)
+    {
+      this.menuController.enable(true,'principal');
 
-  toggle()
-  {
-  this.menuController.toggle();
- }
+    }
+  }
 
 }
