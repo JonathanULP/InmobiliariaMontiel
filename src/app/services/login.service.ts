@@ -21,7 +21,7 @@ public login (credenciales:loginView):Promise<string>{
       .subscribe(
        res => {
         this.storageservice.set('token', res);
-        resolve(res)
+        resolve(res);
        }, err => reject(err)
       );
   });
